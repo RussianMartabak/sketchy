@@ -1,5 +1,7 @@
 const pad = document.querySelector('.sketch-pad');
+const button = document.querySelector('#change-pad');
 let mousehold;
+button.addEventListener('click', e => changePad());
 
 intializePad(16);
 isMouseDown();
@@ -29,3 +31,14 @@ function isMouseDown(){
     console.group(status)
     
 }
+
+function changePad(){
+    let input = parseInt(prompt('Enter the number of pixels per side. The higher the clearer the image is but its capped at 100'));
+    console.log(input);
+    if (!input || input < 1 || input > 100) return;
+    let grids = document.querySelectorAll('.grid');
+    grids.forEach(grid => grid.remove());
+    intializePad(input);
+    
+}
+

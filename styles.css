@@ -15,10 +15,29 @@ h1{
 p{
     font-family: 'Helvetica', sans-serif;
     text-align: center;
+    margin-bottom: 0;
+}
+#change-pad:hover{
+    cursor: pointer;
 }
 
 .button-group{
     height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#change-pad{
+    color: white;
+    background-color: royalblue;
+    height: 32px;
+    width: 115px;
+    border: none;
+    border-radius: 10px;
+    
 }
 
 .sketch-pad{
